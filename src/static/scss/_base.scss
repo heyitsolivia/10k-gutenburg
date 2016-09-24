@@ -1,0 +1,75 @@
+body {
+    font-size: 1rem;
+    color: #222;
+    background: #e9edf1;
+    margin: 0;
+}
+
+main {
+    max-width: 30em;
+    margin: auto;
+    margin-bottom: 6rem;
+    background-color: #fff;
+    padding: 4rem 7rem;
+    border-radius: 3px;
+}
+
+p {
+    font-size: 0.95rem;
+    line-height: 1.75;
+    font-family: "Libre Baskerville", baskerville, times;
+    margin-top: 0.75em;
+    margin-bottom: 0.75em;
+}
+
+p + p {
+    text-indent: 2em;
+}
+
+.first-line {
+    text-transform: uppercase;
+    font-size: 0.825em;
+}
+
+.dropcap {
+    text-indent: 0;
+}
+.dropcap:first-letter {
+    float: left;
+    margin: 0;
+    padding: 0.125em 0.125em 0 0;
+    font-size: 6em;
+    // font-family: Copperplate;
+    line-height: 0.5;
+    text-indent: 0;
+    background: transparent;
+    color: inherit;
+}
+
+quote {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    display: block;
+}
+
+quote,
+quote p {
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+header {
+    background: #dae2e8;
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 6rem;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+.chapter-break {
+    display: block;
+    margin: 5rem auto 2.5rem;
+    font-size: 1.5em;
+    text-align: center;
+}
