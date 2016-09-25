@@ -15,35 +15,20 @@ main {
 }
 
 p {
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     line-height: 1.75;
-    font-family: "Libre Baskerville", baskerville, times;
+    font-family: "Alegreya", baskerville, times;
     margin-top: 0.75em;
     margin-bottom: 0.75em;
 }
 
 p + p {
-    text-indent: 2em;
+    text-indent: 1.5em;
 }
 
 .first-line {
     text-transform: uppercase;
     font-size: 0.825em;
-}
-
-.dropcap {
-    text-indent: 0;
-}
-.dropcap:first-letter {
-    float: left;
-    margin: 0;
-    padding: 0.125em 0.125em 0 0;
-    font-size: 6em;
-    // font-family: Copperplate;
-    line-height: 0.5;
-    text-indent: 0;
-    background: transparent;
-    color: inherit;
 }
 
 quote {
@@ -72,4 +57,15 @@ header {
     margin: 5rem auto 2.5rem;
     font-size: 1.5em;
     text-align: center;
+}
+
+.type__section-break {
+    background-image: url("../img/fleuron.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 0;
+    height: 1rem;
+    background-size: contain;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
 }

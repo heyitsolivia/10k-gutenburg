@@ -29,7 +29,7 @@
         <script src="/static/js/bundle.js" async defer></script>
     </head>
     <body>
-        <header>A Scandal in Bohemia</header>
+        <header>{% block title %}{% endblock %}</header>
         {% block content %}
         {% endblock %}
 
