@@ -121,10 +121,20 @@ gulp.task('publish', ['revreplacejs'], function () {
         .pipe(awspublish.reporter());
 });
 
+gulp.task('teardown', ['publish'], function () {
+    return del([
+        'dist/components',
+        'dist/css',
+        'dist/img',
+        'dist/js',
+        'dist/rev-manifest.json'
+    ]);
+});
+
 gulp.task('default', [
   'sass',
   'develop',
   'watch'
 ]);
 
-gulp.task('build:production', ['publish']);
+gulp.task('build:production', ['teardown']);
