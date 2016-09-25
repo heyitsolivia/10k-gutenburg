@@ -13,5 +13,5 @@ e.replace&&rt(i,t),this._isCompiled=!0,this._callHook("compiled")}},t.prototype.
 function ready(a){"loading"!=document.readyState?a():document.addEventListener("DOMContentLoaded",a)}
 
 ready(function () {
-    loadCSS('css/style.css');
+    loadCSS('css/app.css');
 });
