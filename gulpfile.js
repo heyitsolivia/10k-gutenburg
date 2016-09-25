@@ -3,6 +3,11 @@ var gulp = require('gulp'),
   plumber = require('gulp-plumber'),
   livereload = require('gulp-livereload'),
   sass = require('gulp-sass');
+var del = require('del');
+var rev = require('gulp-rev');
+var revReplace = require('gulp-rev-replace');
+
+var cloudFrontUrl = '';
 
 gulp.task('sass', function () {
   gulp.src('./public/css/*.scss')
@@ -33,8 +38,39 @@ gulp.task('develop', function () {
   });
 });
 
+// Production
+
+gulp.task('clean', function () {
+  return del(['dist']);
+});
+
+gulp.task('rev', ['clean'], function () {
+  return gulp.src(['public/**/*', '!**/*.html', '!**/*.txt', '!**/*.ico', '!**/*.scss'])
+      .pipe(rev())
+      .pipe(gulp.dest('dist/'))
+      .pipe(rev.manifest())
+      .pipe(gulp.dest('dist/'));
+});
+
+gulp.task('copyviews', ['rev'], function () {
+  return gulp.src(['app/views/**/*'])
+      .pipe(gulp.dest('dist/views/'));
+});
+
+gulp.task('revreplace', ['copyviews'], function () {
+  return gulp.src(['dist/views/**/*'])
+      .pipe(revReplace({
+        manifest: gulp.src('dist/rev-manifest.json'),
+        replaceInExtensions: ['.nunjucks'],
+        prefix: cloudFrontUrl
+      }))
+      .pipe(gulp.dest('dist/views'));
+});
+
 gulp.task('default', [
   'sass',
   'develop',
   'watch'
 ]);
+
+gulp.task('build:production', ['revreplace']);

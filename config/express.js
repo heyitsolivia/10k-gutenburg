@@ -14,8 +14,13 @@ module.exports = function(app, config) {
   var env = process.env.NODE_ENV || 'development';
   app.locals.ENV = env;
   app.locals.ENV_DEVELOPMENT = env == 'development';
-  
-  app.set('views', config.root + '/app/views');
+
+  if (app.get('env') === 'development') {
+    app.set('views', config.root + '/app/views');
+  } else {
+    app.set('views', config.root + '/dist/views');
+  }
+
   app.set('view engine', 'nunjucks');
   nunjucks.configure(config.root + '/app/views', {
       autoescape: true,
@@ -30,7 +35,13 @@ module.exports = function(app, config) {
   }));
   app.use(cookieParser());
   app.use(compress());
-  app.use(express.static(config.root + '/public'));
+
+  if (app.get('env') === 'development') {
+    app.use(express.static(config.root + '/public'));
+  } else {
+    app.use(express.static(config.root + '/dist'));
+  }
+
   app.use(methodOverride());
   app.use(minifyHTML({
     override: true,

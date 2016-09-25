@@ -10,4 +10,8 @@ Dependencies
 Development
 -----------
 Start server:
-* `npm start`
+* `npm run dev`
+
+Deployment
+----------
+* `npm run build`
