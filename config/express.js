@@ -22,10 +22,18 @@ module.exports = function(app, config) {
   }
 
   app.set('view engine', 'nunjucks');
-  nunjucks.configure(config.root + '/app/views', {
+
+  if (app.get('env') === 'development') {
+    nunjucks.configure(config.root + '/app/views', {
       autoescape: true,
       express: app
-  });
+    });
+  } else {
+    nunjucks.configure(config.root + '/dist/views', {
+      autoescape: true,
+      express: app
+    });
+  }
 
   // app.use(favicon(config.root + '/public/img/favicon.ico'));
   app.use(logger('dev'));
