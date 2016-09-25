@@ -69,9 +69,7 @@ gulp.task('uglifyjs', ['purifycss'], function () {
   return gulp.src(['dist/js/*.js'])
       .pipe(uglify({
         preserveComments: 'license',
-        compressor: {
-          screw_ie8: true
-        }
+        mangle: true
       }))
       .pipe(gulp.dest('dist/js'));
 });
