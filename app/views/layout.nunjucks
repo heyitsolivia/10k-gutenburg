@@ -1,34 +1,39 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>{{ title }}</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="apple-touch-icon-precomposed" href="/favicon-152.png">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{{ title }}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon-precomposed" href="/favicon-152.png">
 
-  <meta property="og:title" content="" />
-  <meta property="og:site_name" content="" />
-  <meta property="og:url" content="" />
-  <meta property="og:description" content="" />
-  <meta property="fb:app_id" content="">
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="" />
+    <meta property="og:title" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:description" content="" />
+    <meta property="fb:app_id" content="">
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="" />
 
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="">
-  <meta name="twitter:creator" content="">
-  <meta name="twitter:title" content="">
-  <meta name="twitter:description" content="">
-  <meta name="twitter:image" content="">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="">
+    <meta name="twitter:creator" content="">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="">
 
-  <script src="/js/app.js" async></script>
-  {% if ENV_DEVELOPMENT %}
+    <link href="/css/app.css" rel="stylesheet">
+    <script src="/js/app.js" async></script>
+    {% if ENV_DEVELOPMENT %}
     <script src="http://localhost:35729/livereload.js"></script>
-  {% endif %}
+    {% endif %}
 </head>
 <body>
-  {% block content %}{% endblock %}
+    {% include "partials/header.nunjucks" %}
+    <main class="main" role="main">
+        <img src="/img/logo.svg" alt="Gutenburg Collective" width="200">
+        {% block content %}{% endblock %}
+    </main>
 </body>
 </html>
