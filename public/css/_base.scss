@@ -3,18 +3,18 @@
 @import 'https://fonts.googleapis.com/css?family=Alegreya:400,400i';
 
 body {
-  background: $primary-color--light;
-  font-family: 'Alegreya', times, serif;
+    background: $primary-color--light;
+    font-family: 'Alegreya', times, serif;
 }
 
 .main {
-  margin: 1rem;
+    margin: 1rem;
 }
 
 .header {
-  background-color: $primary-color;
-  padding: 1rem;
-  text-transform: uppercase;
-  text-align: center;
-  font-style: italic;
+    background-color: $primary-color;
+    padding: 1rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-style: italic;
 }
