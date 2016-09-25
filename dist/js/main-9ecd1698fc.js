@@ -1,0 +1,1 @@
+function ready(e){"loading"!=document.readyState?e():document.addEventListener("DOMContentLoaded",e)}ready(function(){console.warn("loaded")});

@@ -1,4 +1,0 @@
-/*!
- * domready (c) Dustin Diaz 2012 - License MIT
- */
-!function(e,t){"undefined"!=typeof module?module.exports=t():"function"==typeof define&&"object"==typeof define.amd?define(t):this[e]=t()}("domready",function(e){function t(e){for(m=1;e=o.shift();)e()}var n,o=[],d=!1,c=document,f=c.documentElement,u=f.doScroll,i="DOMContentLoaded",a="addEventListener",r="onreadystatechange",s="readyState",l=u?/^loaded|^c/:/^loaded|c/,m=l.test(c[s]);return c[a]&&c[a](i,n=function(){c.removeEventListener(i,n,d),t()},d),u&&c.attachEvent(r,n=function(){/^c/.test(c[s])&&(c.detachEvent(r,n),t())}),e=u?function(t){self!=top?m?t():o.push(t):function(){try{f.doScroll("left")}catch(n){return setTimeout(function(){e(t)},50)}t()}()}:function(e){m?e():o.push(e)}}),domready(function(){console.warn("dom ready")});

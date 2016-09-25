@@ -6,7 +6,7 @@ var gulp = require('gulp'),
 var del = require('del');
 var rev = require('gulp-rev');
 var revReplace = require('gulp-rev-replace');
-var purifycss = require('gulp-purifycss');
+var cssmin = require('gulp-cssmin');
 var uglify = require('gulp-uglify');
 
 var cloudFrontUrl = '';
@@ -59,13 +59,13 @@ gulp.task('copyviews', ['rev'], function () {
       .pipe(gulp.dest('dist/views/'));
 });
 
-gulp.task('purifycss', ['copyviews'], function () {
+gulp.task('cssmin', ['copyviews'], function () {
   return gulp.src(['dist/css/*.css'])
-      .pipe(purifycss(['dist/js/*.js', 'dist/views/*.nunjucks'], { minify: true }))
+      .pipe(cssmin())
       .pipe(gulp.dest('dist/css'));
 });
 
-gulp.task('uglifyjs', ['purifycss'], function () {
+gulp.task('uglifyjs', ['cssmin'], function () {
   return gulp.src(['dist/js/*.js'])
       .pipe(uglify({
         preserveComments: 'license',
@@ -84,10 +84,20 @@ gulp.task('revreplace', ['uglifyjs'], function () {
       .pipe(gulp.dest('dist/views'));
 });
 
+gulp.task('revreplacejs', ['revreplace'], function () {
+  return gulp.src(['dist/js/**/*'])
+      .pipe(revReplace({
+        manifest: gulp.src('dist/rev-manifest.json'),
+        replaceInExtensions: ['.js'],
+        prefix: cloudFrontUrl
+      }))
+      .pipe(gulp.dest('dist/js'));
+});
+
 gulp.task('default', [
   'sass',
   'develop',
   'watch'
 ]);
 
-gulp.task('build:production', ['revreplace']);
+gulp.task('build:production', ['revreplacejs']);
