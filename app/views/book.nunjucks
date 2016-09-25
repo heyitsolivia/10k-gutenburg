@@ -1,0 +1,7 @@
+{% extends 'layout.nunjucks' %}
+
+{% block content %}
+    <a href=".{{ previousPageUrl }}">Previous Page</a>
+    <a href=".{{ nextPageUrl }}">Next Page</a>
+    {{ bookPage | safe }}
+{% endblock %}

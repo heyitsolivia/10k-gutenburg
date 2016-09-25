@@ -63,10 +63,7 @@ module.exports = function(app, config) {
     }
   }));
 
-  var controllers = glob.sync(config.root + '/app/controllers/*.js');
-  controllers.forEach(function (controller) {
-    require(controller)(app);
-  });
+  app.use(require('../app/controllers'));
 
   app.use(function (req, res, next) {
     var err = new Error('Not Found');
