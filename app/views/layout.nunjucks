@@ -23,12 +23,17 @@
   <meta name="twitter:description" content="">
   <meta name="twitter:image" content="">
 
+  <link href="/css/app.css" rel="stylesheet">
   <script src="/js/app.js" async></script>
   {% if ENV_DEVELOPMENT %}
     <script src="http://localhost:35729/livereload.js"></script>
   {% endif %}
 </head>
 <body>
-  {% block content %}{% endblock %}
+  {% include "partials/header.nunjucks" %}
+  <main class="main" role="main">
+      <img src="/img/logo.svg" alt="Gutenburg Collective" width="200">
+      {% block content %}{% endblock %}
+  </main>
 </body>
 </html>

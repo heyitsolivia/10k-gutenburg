@@ -6,6 +6,7 @@
  */
 /* Document
    ========================================================================== */
+@import 'https://fonts.googleapis.com/css?family=Alegreya:400,400i';
 html {
   font-family: sans-serif;
   /* 1 */
@@ -402,4 +403,15 @@ template {
   display: none; }
 
 body {
-  background: #E9EDF1; }
+  background: #E9EDF1;
+  font-family: 'Alegreya', times, serif; }
+
+.main {
+  margin: 1rem; }
+
+.header {
+  background-color: #DAE2E8;
+  padding: 1rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-style: italic; }
