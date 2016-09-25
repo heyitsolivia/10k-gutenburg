@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {},
   "engines": {
-    "node": "6.3.0"
+    "node": "6.0.0"
   },
   "dependencies": {
     "body-parser": "^1.13.3",
