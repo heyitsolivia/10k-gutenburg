@@ -4,13 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width">
   <title>{{ title }}</title>
-  <script src="/js/main-9ecd1698fc.js" async></script>
+  <script src="/js/app-168c38d4a8.js" async></script>
   {% if ENV_DEVELOPMENT %}
     <script src="http://localhost:35729/livereload.js"></script>
   {% endif %}
 </head>
 <body>
-  <link rel="stylesheet" href="/css/style-22803fd8d3.css">
   {% block content %}{% endblock %}
 </body>
 </html>
