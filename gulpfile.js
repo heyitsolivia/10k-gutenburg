@@ -6,6 +6,8 @@ var gulp = require('gulp'),
 var del = require('del');
 var rev = require('gulp-rev');
 var revReplace = require('gulp-rev-replace');
+var purifycss = require('gulp-purifycss');
+var uglify = require('gulp-uglify');
 
 var cloudFrontUrl = '';
 
@@ -57,7 +59,24 @@ gulp.task('copyviews', ['rev'], function () {
       .pipe(gulp.dest('dist/views/'));
 });
 
-gulp.task('revreplace', ['copyviews'], function () {
+gulp.task('purifycss', ['copyviews'], function () {
+  return gulp.src(['dist/css/*.css'])
+      .pipe(purifycss(['dist/js/*.js', 'dist/views/*.nunjucks'], { minify: true }))
+      .pipe(gulp.dest('dist/css'));
+});
+
+gulp.task('uglifyjs', ['purifycss'], function () {
+  return gulp.src(['dist/js/*.js'])
+      .pipe(uglify({
+        preserveComments: 'license',
+        compressor: {
+          screw_ie8: true
+        }
+      }))
+      .pipe(gulp.dest('dist/js'));
+});
+
+gulp.task('revreplace', ['uglifyjs'], function () {
   return gulp.src(['dist/views/**/*'])
       .pipe(revReplace({
         manifest: gulp.src('dist/rev-manifest.json'),
