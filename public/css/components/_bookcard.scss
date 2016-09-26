@@ -1,0 +1,48 @@
+// Book Card
+
+.bookcard {
+    display: flex;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    perspective: 1000;
+    transform-style: preserve-3d;
+}
+
+.bookcard__cover {
+    background-color: #f5f5f5;
+    background-image: linear-gradient(180deg, transparent, transparent 75%, rgba(0, 0, 0, 0.05) 100%);
+    border-radius: 3px;
+    box-shadow: 0 0 1rem rgba(0,0,0, 0.2);
+    cursor: pointer;
+    height: rem-calc(225);
+    width: rem-calc(150);
+}
+
+.bookcard__image {
+    border-radius: 3px;
+    height: rem-calc(225);
+    transform-origin: left center;
+    transition: transform 600ms;
+    width: rem-calc(150);
+}
+
+.bookcard:hover .bookcard__image{
+    transform: rotateY(-30deg);
+}
+
+.bookcard__content {
+    margin: 1rem;
+
+    a {
+        color: #444;
+        line-height: 1.2;
+    }
+
+    .type--small {
+        color: #666;
+    }
+}
+
+.bookcard__content-title {
+    margin-bottom: 0.5rem;
+}
