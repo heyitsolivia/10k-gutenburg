@@ -1,7 +1,7 @@
 {% extends 'layout.nunjucks' %}
 
 {% block content %}
-    <div class="js-page">
+    <div class="page js-page">
         {{ bookPage | safe }}
     </div>
 
