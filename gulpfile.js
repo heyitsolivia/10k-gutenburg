@@ -61,7 +61,7 @@ gulp.task('copyviews', ['rev'], function () {
 });
 
 gulp.task('copybooks', ['copyviews'], function () {
-  return gulp.src(['app/books/**/*'])
+  return gulp.src(['public/books/**/*'])
       .pipe(gulp.dest('dist/books/'));
 });
 
