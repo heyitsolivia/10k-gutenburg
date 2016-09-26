@@ -9,6 +9,7 @@ var revReplace = require('gulp-rev-replace');
 var cssmin = require('gulp-cssmin');
 var uglify = require('gulp-uglify');
 var awspublish = require('gulp-awspublish');
+const autoprefixer = require('gulp-autoprefixer');
 
 var cloudFrontUrl = 'https://d2qrn6phobn81r.cloudfront.net';
 
@@ -16,6 +17,7 @@ gulp.task('sass', function () {
   gulp.src('./public/css/*.scss')
     .pipe(plumber())
     .pipe(sass())
+    .pipe(autoprefixer({ browsers: ['last 4 versions'] }))
     .pipe(gulp.dest('./public/css'))
     .pipe(livereload());
 });
