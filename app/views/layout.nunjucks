@@ -32,7 +32,6 @@
 <body class="js-app">
     {% include "partials/header.nunjucks" %}
     <main class="main" role="main">
-        <img src="/img/logo.svg" alt="Gutenburg Collective" width="200">
         {% block content %}{% endblock %}
     </main>
 </body>

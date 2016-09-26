@@ -1,10 +1,9 @@
 // Base Styles
 
-@import 'https://fonts.googleapis.com/css?family=Alegreya:400,400i';
-
 body {
     background: $primary-color--light;
-    font-family: 'Alegreya', times, serif;
+    font-family: $font-family-serif;
+    color: $black;
 }
 
 .main {
@@ -17,4 +16,27 @@ body {
     text-transform: uppercase;
     text-align: center;
     font-style: italic;
+}
+
+
+*, :after, :before {
+    box-sizing: inherit;
+}
+
+.section__header {
+    @extend %type--large;
+    text-align: center;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+// Accessibility
+
+// Show for screen readers only
+.show-for-sr {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
 }

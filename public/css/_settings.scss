@@ -6,3 +6,13 @@ $black: #222;
 $primary-color: #DAE2E8;
 $primary-color--light: #E9EDF1;
 $primary-color--dark: #BAC6CE;
+
+// Typography
+$global-font-size: 100%;
+$font-family-sans: "Alegreya Sans", Helvetica, Arial, sans-serif;
+$font-family-serif: "Alegreya", Times, serif;
+
+// Grid
+$grid-width: rem-calc(1280px);
+$grid-gutter: rem-calc(16px);
+

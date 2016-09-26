@@ -7,6 +7,7 @@
 /* Document
    ========================================================================== */
 @import 'https://fonts.googleapis.com/css?family=Alegreya:400,400i';
+@import 'https://fonts.googleapis.com/css?family=Alegreya+sans:400,500';
 html {
   font-family: sans-serif;
   /* 1 */
@@ -402,9 +403,110 @@ template {
 [hidden] {
   display: none; }
 
+.row {
+  display: flex;
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  flex-flow: row wrap; }
+
+.row--expanded {
+  max-width: 100%; }
+
+.align-center {
+  justify-content: center; }
+
+.columns {
+  flex: 1 1 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  box-sizing: border-box; }
+
+.small-12 {
+  flex: 0 0 100%;
+  max-width: 100%; }
+
+.small-4 {
+  flex: 0 0 30%;
+  max-width: 30%; }
+
+.small-3 {
+  flex: 0 0 33.33333%;
+  max-width: 33.33333%; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0; }
+
+
+.type--jumbo {
+  font-family: "Alegreya", Times, serif;
+  font-size: 3rem;
+  line-height: 2rem; }
+
+.section__header,
+.type--large {
+  font-family: "Alegreya", Times, serif;
+  font-size: 2rem; }
+
+
+.type--medium {
+  font-family: "Alegreya", Times, serif;
+  font-size: 1.2rem; }
+
+
+.type--regular {
+  font-family: "Alegreya", Times, serif;
+  font-size: 1rem; }
+
+
+.type--small {
+  font-family: "Alegreya", Times, serif;
+  font-size: 0.85rem; }
+
+.text-center {
+  text-align: center; }
+
+.bookcard {
+  display: flex;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  perspective: 1000;
+  transform-style: preserve-3d; }
+
+.bookcard__cover {
+  background-color: #f5f5f5;
+  background-image: linear-gradient(180deg, transparent, transparent 75%, rgba(0, 0, 0, 0.05) 100%);
+  border-radius: 3px;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  height: 14.0625rem;
+  width: 9.375rem; }
+
+.bookcard__image {
+  border-radius: 3px;
+  height: 14.0625rem;
+  transform-origin: left center;
+  transition: transform 600ms;
+  width: 9.375rem; }
+
+.bookcard:hover .bookcard__image {
+  transform: rotateY(-30deg); }
+
+.bookcard__content {
+  margin: 1rem; }
+  .bookcard__content a {
+    color: #444;
+    line-height: 1.2; }
+  .bookcard__content .type--small {
+    color: #666; }
+
+.bookcard__content-title {
+  margin-bottom: 0.5rem; }
+
 body {
   background: #E9EDF1;
-  font-family: 'Alegreya', times, serif; }
+  font-family: "Alegreya", Times, serif;
+  color: #222; }
 
 .main {
   margin: 1rem; }
@@ -415,3 +517,18 @@ body {
   text-transform: uppercase;
   text-align: center;
   font-style: italic; }
+
+*, :after, :before {
+  box-sizing: inherit; }
+
+.section__header {
+  text-align: center;
+  margin-bottom: 2rem;
+  margin-top: 2rem; }
+
+.show-for-sr {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0); }
