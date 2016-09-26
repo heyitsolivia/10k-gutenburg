@@ -48,7 +48,7 @@ gulp.task('clean', function () {
 });
 
 gulp.task('rev', ['clean'], function () {
-  return gulp.src(['public/**/*', '!**/*.html', '!**/*.txt', '!**/*.ico', '!**/*.scss'])
+  return gulp.src(['public/**/*', '!**/*.html', '!**/*.txt', '!**/*.ico', '!**/*.scss', '!**/*.json'])
       .pipe(rev())
       .pipe(gulp.dest('dist/'))
       .pipe(rev.manifest())
@@ -60,7 +60,12 @@ gulp.task('copyviews', ['rev'], function () {
       .pipe(gulp.dest('dist/views/'));
 });
 
-gulp.task('cssmin', ['copyviews'], function () {
+gulp.task('copybooks', ['copyviews'], function () {
+  return gulp.src(['app/books/**/*'])
+      .pipe(gulp.dest('dist/books/'));
+});
+
+gulp.task('cssmin', ['copybooks'], function () {
   return gulp.src(['dist/css/*.css'])
       .pipe(cssmin())
       .pipe(gulp.dest('dist/css'));
@@ -123,6 +128,7 @@ gulp.task('publish', ['revreplacejs'], function () {
 
 gulp.task('teardown', ['publish'], function () {
     return del([
+        'dist/books',
         'dist/components',
         'dist/css',
         'dist/img',

@@ -29,7 +29,7 @@
     <script src="http://localhost:35729/livereload.js"></script>
     {% endif %}
 </head>
-<body>
+<body class="js-app">
     {% include "partials/header.nunjucks" %}
     <main class="main" role="main">
         <img src="/img/logo.svg" alt="Gutenburg Collective" width="200">

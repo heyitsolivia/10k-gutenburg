@@ -11,7 +11,99 @@ e.replace&&rt(i,t),this._isCompiled=!0,this._callHook("compiled")}},t.prototype.
 !function(a){"use strict";var b=function(b,c,d){function j(a){return e.body?a():void setTimeout(function(){j(a)})}function l(){f.addEventListener&&f.removeEventListener("load",l),f.media=d||"all"}var g,e=a.document,f=e.createElement("link");if(c)g=c;else{var h=(e.body||e.getElementsByTagName("head")[0]).childNodes;g=h[h.length-1]}var i=e.styleSheets;f.rel="stylesheet",f.href=b,f.media="only x",j(function(){g.parentNode.insertBefore(f,c?g:g.nextSibling)});var k=function(a){for(var b=f.href,c=i.length;c--;)if(i[c].href===b)return a();setTimeout(function(){k(a)})};return f.addEventListener&&f.addEventListener("load",l),f.onloadcssdefined=k,k(l),f};"undefined"!=typeof exports?exports.loadCSS=b:a.loadCSS=b}("undefined"!=typeof global?global:this);
 /*! dom ready */
 function ready(a){"loading"!=document.readyState?a():document.addEventListener("DOMContentLoaded",a)}
+// http://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+// https://remysharp.com/2010/07/21/throttling-function-calls
+function throttle(fn, threshhold, scope) {
+    threshhold || (threshhold = 500);
+    var last,
+        deferTimer;
+    return function () {
+        var context = scope || this;
+
+        var now = +new Date,
+            args = arguments;
+        if (last && now < last + threshhold) {
+            // hold on to it
+            clearTimeout(deferTimer);
+            deferTimer = setTimeout(function () {
+                last = now;
+                fn.apply(context, args);
+            }, threshhold);
+        } else {
+            last = now;
+            fn.apply(context, args);
+        }
+    };
+}
 
 ready(function () {
     loadCSS('/css/app.css');
+
+    Vue.config.delimiters = ['[[', ']]'];
+
+    new Vue({
+        el: '.js-app',
+        data: {
+            message: 'foo'
+        }
+    });
+
+    var pathParts = window.location.pathname.split('/');
+
+    if (pathParts[1] === 'books') {
+        initializeInfiniteScroll(pathParts[2]);
+    }
 });
+
+function initializeInfiniteScroll(bookId) {
+    var loadedPage = getParameterByName('page') || 1;
+    var nextPage = +loadedPage + 1;
+    var isLoading = false;
+
+    var request = new XMLHttpRequest();
+    var metadata = { pages: 1000 };
+    request.open('GET', '/books/' + bookId + '/metadata.json', true);
+    request.onload = function() {
+        metadata = JSON.parse(request.responseText);
+    };
+    request.send();
+
+    if (document.querySelectorAll('.js-previous-page')[0]) {
+        document.querySelectorAll('.js-previous-page')[0].remove();
+    }
+    if (document.querySelectorAll('.js-next-page')[0]) {
+        document.querySelectorAll('.js-next-page')[0].remove();
+    }
+
+
+    window.addEventListener('scroll', throttle(function() {
+        if ((window.innerHeight + window.scrollY) >= (document.body.offsetHeight - 500)) {
+            if (!isLoading && nextPage <= metadata.pages) {
+                var pageRequest = new XMLHttpRequest();
+                pageRequest.open('GET', '/books/' + bookId + '/page.' + nextPage + '.html', true);
+                pageRequest.onload = function() {
+                    var element = document.querySelectorAll('.js-page')[0];
+                    var e = document.createElement('div');
+                    e.innerHTML = pageRequest.responseText;
+                    while(e.firstChild) {
+                        element.appendChild(e.firstChild);
+                    }
+                    nextPage += 1;
+                    isLoading = false;
+                };
+
+                pageRequest.send();
+                isLoading = true;
+            }
+        }
+    }));
+}
