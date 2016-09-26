@@ -7,7 +7,7 @@
 /* Document
    ========================================================================== */
 @import 'https://fonts.googleapis.com/css?family=Alegreya:400,400i';
-@import 'https://fonts.googleapis.com/css?family=Alegreya+sans:400,500';
+@import 'https://fonts.googleapis.com/css?family=Alegreya+Sans:400,500';
 html {
   font-family: sans-serif;
   /* 1 */
@@ -404,34 +404,48 @@ template {
   display: none; }
 
 .row {
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   max-width: 80rem;
   margin-left: auto;
   margin-right: auto;
-  flex-flow: row wrap; }
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap; }
 
 .row--expanded {
   max-width: 100%; }
 
 .align-center {
-  justify-content: center; }
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
 
 .columns {
-  flex: 1 1 0;
+  -webkit-flex: 1 1 0;
+      -ms-flex: 1 1 0;
+          flex: 1 1 0;
   padding-left: 1rem;
   padding-right: 1rem;
   box-sizing: border-box; }
 
 .small-12 {
-  flex: 0 0 100%;
+  -webkit-flex: 0 0 100%;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
   max-width: 100%; }
 
 .small-4 {
-  flex: 0 0 30%;
+  -webkit-flex: 0 0 30%;
+      -ms-flex: 0 0 30%;
+          flex: 0 0 30%;
   max-width: 30%; }
 
 .small-3 {
-  flex: 0 0 33.33333%;
+  -webkit-flex: 0 0 33.33333%;
+      -ms-flex: 0 0 33.33333%;
+          flex: 0 0 33.33333%;
   max-width: 33.33333%; }
 
 h1, h2, h3, h4, h5, h6 {
@@ -467,11 +481,15 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center; }
 
 .bookcard {
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  perspective: 1000;
-  transform-style: preserve-3d; }
+  -webkit-perspective: 1000;
+          perspective: 1000;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d; }
 
 .bookcard__cover {
   background-color: #f5f5f5;
@@ -485,12 +503,17 @@ h1, h2, h3, h4, h5, h6 {
 .bookcard__image {
   border-radius: 3px;
   height: 14.0625rem;
-  transform-origin: left center;
+  -webkit-transform-origin: left center;
+      -ms-transform-origin: left center;
+          transform-origin: left center;
+  transition: -webkit-transform 600ms;
   transition: transform 600ms;
+  transition: transform 600ms, -webkit-transform 600ms;
   width: 9.375rem; }
 
 .bookcard:hover .bookcard__image {
-  transform: rotateY(-30deg); }
+  -webkit-transform: rotateY(-30deg);
+          transform: rotateY(-30deg); }
 
 .bookcard__content {
   margin: 1rem; }
