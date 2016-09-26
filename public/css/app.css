@@ -536,10 +536,17 @@ body {
 
 .header {
   background-color: #DAE2E8;
+  text-transform: uppercase;
   text-align: center;
   font-style: italic;
   height: 4rem;
   text-align: center; }
+
+.logo {
+  transition: opacity 200ms;
+  opacity: 1; }
+  .logo:hover {
+    opacity: 0.5; }
 
 .header--book {
   display: -webkit-flex;
@@ -547,13 +554,19 @@ body {
   display: flex;
   -webkit-align-items: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0; }
   .header--book .header__logo {
     position: absolute; }
   .header--book .book__title {
     -webkit-flex: 1;
         -ms-flex: 1;
             flex: 1; }
+
+.header--book + .main {
+  margin-top: 9rem; }
 
 .section__header {
   text-align: center;

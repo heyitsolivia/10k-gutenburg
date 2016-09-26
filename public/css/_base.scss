@@ -12,18 +12,28 @@ body {
 
 .header {
     background-color: $primary-color;
-    // text-transform: uppercase;
+    text-transform: uppercase;
     text-align: center;
     font-style: italic;
-    // display: flex;
     height: 4rem;
-    // align-items: center;
     text-align: center;
+}
+
+.logo {
+    transition: opacity 200ms;
+    opacity: 1;
+
+    &:hover {
+        opacity: 0.5;
+    }
 }
 
 .header--book {
     display: flex;
     align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
 
     .header__logo {
         position: absolute;
@@ -32,6 +42,10 @@ body {
     .book__title {
         flex: 1;
     }
+}
+
+.header--book + .main {
+    margin-top: 9rem;
 }
 
 .section__header {
