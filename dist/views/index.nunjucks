@@ -35,7 +35,7 @@
         <div class="columns small-4">
             <div class="bookcard">
                 <div class="bookcard__cover">
-                    <img class="bookcard__image" src="https://d2qrn6phobn81r.cloudfront.netimg/frankenstein-6bf90812bd.jpg" alt="Book cover for Frankenstein" width="125">
+                    <img class="bookcard__image" src="https://d2qrn6phobn81r.cloudfront.net/img/frankenstein-6bf90812bd.jpg" alt="Book cover for Frankenstein" width="125">
                 </div>
                 <div class="bookcard__content">
                     <h2 class="bookcard__content-title type--regular">
