@@ -26,8 +26,8 @@ router.get('/:id', function(req, res) {
         bookPage: bookPage,
         hasPrevious: +pageNumber > 1,
         hasNext: +pageNumber < metadata.pages,
-        previousPageUrl: req.path + '?page=' + (+pageNumber - 1),
-        nextPageUrl: req.path + '?page=' + (+pageNumber + 1)
+        previousPageUrl: '?page=' + (+pageNumber - 1),
+        nextPageUrl: '?page=' + (+pageNumber + 1)
     });
 });
 

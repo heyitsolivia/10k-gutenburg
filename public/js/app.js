@@ -98,6 +98,11 @@ function initializeInfiniteScroll(bookId) {
                     while(e.firstChild) {
                         element.appendChild(e.firstChild);
                     }
+
+                    if (history.pushState) {
+                        var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?page=' + nextPage;
+                        window.history.pushState({path:newurl},'',newurl);
+                    }
                     nextPage += 1;
                     isLoading = false;
                 };
