@@ -23,7 +23,7 @@ function getParameterByName(name, url) {
 }
 // https://remysharp.com/2010/07/21/throttling-function-calls
 function throttle(fn, threshhold, scope) {
-    threshhold || (threshhold = 500);
+    threshhold || (threshhold = 250);
     var last,
         deferTimer;
     return function () {
@@ -48,8 +48,6 @@ function throttle(fn, threshhold, scope) {
 var baseUrl = '/css/app.css'.split('/css')[0];
 
 ready(function () {
-    loadCSS('/css/app.css');
-
     Vue.config.delimiters = ['[[', ']]'];
 
     new Vue({
@@ -61,7 +59,9 @@ ready(function () {
 
     var pathParts = window.location.pathname.split('/');
 
+    loadCSS('/css/app.css');
     if (pathParts[1] === 'books') {
+        loadCSS('/css/books.css');
         initializeInfiniteScroll(pathParts[2]);
     }
 });
@@ -86,9 +86,8 @@ function initializeInfiniteScroll(bookId) {
         document.querySelectorAll('.js-next-page')[0].remove();
     }
 
-
     window.addEventListener('scroll', throttle(function() {
-        if ((window.innerHeight + window.scrollY) >= (document.body.offsetHeight - 500)) {
+        if ((window.innerHeight + window.scrollY) >= (document.body.offsetHeight - 650)) {
             if (!isLoading && nextPage <= metadata.pages) {
                 var pageRequest = new XMLHttpRequest();
                 pageRequest.open('GET', baseUrl + '/books/' + bookId + '/page.' + nextPage + '.html', true);
