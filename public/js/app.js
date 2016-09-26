@@ -45,6 +45,8 @@ function throttle(fn, threshhold, scope) {
     };
 }
 
+var baseUrl = '/css/app.css'.split('/css')[0];
+
 ready(function () {
     loadCSS('/css/app.css');
 
@@ -71,7 +73,7 @@ function initializeInfiniteScroll(bookId) {
 
     var request = new XMLHttpRequest();
     var metadata = { pages: 1000 };
-    request.open('GET', '/books/' + bookId + '/metadata.json', true);
+    request.open('GET', baseUrl + '/books/' + bookId + '/metadata.json', true);
     request.onload = function() {
         metadata = JSON.parse(request.responseText);
     };
@@ -89,7 +91,7 @@ function initializeInfiniteScroll(bookId) {
         if ((window.innerHeight + window.scrollY) >= (document.body.offsetHeight - 500)) {
             if (!isLoading && nextPage <= metadata.pages) {
                 var pageRequest = new XMLHttpRequest();
-                pageRequest.open('GET', '/books/' + bookId + '/page.' + nextPage + '.html', true);
+                pageRequest.open('GET', baseUrl + '/books/' + bookId + '/page.' + nextPage + '.html', true);
                 pageRequest.onload = function() {
                     var element = document.querySelectorAll('.js-page')[0];
                     var e = document.createElement('div');
