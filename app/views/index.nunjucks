@@ -11,7 +11,7 @@
                 </div>
                 <div class="bookcard__content">
                     <h2 class="bookcard__content-title type--regular">
-                        <a href="#">Pride and Prejudice</a>
+                        <a href="/books/1342">Pride and Prejudice</a>
                     </h2>
                     <span class="type--small">Jane Austen</span>
                 </div>
