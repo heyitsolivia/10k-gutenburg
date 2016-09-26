@@ -12,15 +12,40 @@ body {
 
 .header {
     background-color: $primary-color;
-    padding: 1rem;
     text-transform: uppercase;
     text-align: center;
     font-style: italic;
+    height: 4rem;
+    text-align: center;
 }
 
+.logo {
+    transition: opacity 200ms;
+    opacity: 1;
 
-*, :after, :before {
-    box-sizing: inherit;
+    &:hover {
+        opacity: 0.5;
+    }
+}
+
+.header--book {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+
+    .header__logo {
+        position: absolute;
+    }
+
+    .book__title {
+        flex: 1;
+    }
+}
+
+.header--book + .main {
+    margin-top: 9rem;
 }
 
 .section__header {

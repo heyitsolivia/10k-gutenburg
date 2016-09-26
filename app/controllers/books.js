@@ -7,7 +7,7 @@ router.get('/:id', function(req, res) {
     var bookId = req.params.id;
     var pageNumber = req.query.page || 1;
 
-    var metadataPath = path.join(__dirname, '..', '..', 'public', 'books', '1342', 'metadata.json');
+    var metadataPath = path.join(__dirname, '..', '..', 'public', 'books', bookId, 'metadata.json');
     var metadata = JSON.parse(fs.readFileSync(metadataPath));
 
     if (pageNumber < 1) {
@@ -23,6 +23,8 @@ router.get('/:id', function(req, res) {
 
     res.render('book', {
         bookId: bookId,
+        bookTitle: metadata.title,
+        bookAuthor: metadata.author,
         bookPage: bookPage,
         hasPrevious: +pageNumber > 1,
         hasNext: +pageNumber < metadata.pages,

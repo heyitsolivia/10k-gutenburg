@@ -1,4 +1,18 @@
 {% extends 'layout.nunjucks' %}
+{% block header %}
+<header class="header header--book">
+    <div class="header__logo">
+        <h1 class="show-for-sr">Gutenburg Collection</h1>
+        <a href="/">
+            <img class="logo" src="/img/logo.svg" alt="Gutenburg Collective" width="150">
+        </a>
+    </div>
+
+    <h2 class="book__title type--regular">{{ bookTitle }} &nbsp;&nbsp;&middot;&nbsp;&nbsp; {{ bookAuthor }}</h2>
+
+</header>
+
+{% endblock %}
 
 {% block content %}
     <div class="page js-page">
