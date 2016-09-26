@@ -12,15 +12,26 @@ body {
 
 .header {
     background-color: $primary-color;
-    padding: 1rem;
-    text-transform: uppercase;
+    // text-transform: uppercase;
     text-align: center;
     font-style: italic;
+    // display: flex;
+    height: 4rem;
+    // align-items: center;
+    text-align: center;
 }
 
+.header--book {
+    display: flex;
+    align-items: center;
 
-*, :after, :before {
-    box-sizing: inherit;
+    .header__logo {
+        position: absolute;
+    }
+
+    .book__title {
+        flex: 1;
+    }
 }
 
 .section__header {

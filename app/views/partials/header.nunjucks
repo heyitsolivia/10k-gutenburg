@@ -1,4 +1,8 @@
 <header class="header">
-    <h1 class="show-for-sr">Gutenburg Collection</h1>
-    <img src="/img/logo.svg" alt="Gutenburg Collective" width="150">
+    <div class="header__logo">
+        <h1 class="show-for-sr">Gutenburg Collection</h1>
+        <a href="/">
+            <img src="/img/logo.svg" alt="Gutenburg Collective" width="150">
+        </a>
+    </div>
 </header>

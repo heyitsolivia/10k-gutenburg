@@ -30,7 +30,9 @@
     {% endif %}
 </head>
 <body class="js-app">
-    {% include "partials/header.nunjucks" %}
+    {% block header %}
+        {% include "partials/header.nunjucks" %}
+    {% endblock %}
     <main class="main" role="main">
         {% block content %}{% endblock %}
     </main>

@@ -536,13 +536,24 @@ body {
 
 .header {
   background-color: #DAE2E8;
-  padding: 1rem;
-  text-transform: uppercase;
   text-align: center;
-  font-style: italic; }
+  font-style: italic;
+  height: 4rem;
+  text-align: center; }
 
-*, :after, :before {
-  box-sizing: inherit; }
+.header--book {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .header--book .header__logo {
+    position: absolute; }
+  .header--book .book__title {
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1; }
 
 .section__header {
   text-align: center;
