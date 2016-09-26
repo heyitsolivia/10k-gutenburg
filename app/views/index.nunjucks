@@ -25,7 +25,7 @@
                 </div>
                 <div class="bookcard__content">
                     <h2 class="bookcard__content-title type--regular">
-                        <a href="#">The Adventures of Sherlock Holmes</a>
+                        <a href="/books/1661">The Adventures of Sherlock Holmes</a>
                     </h2>
                     <span class="type--small">Arthur Conan Doyle</span>
                 </div>
@@ -39,7 +39,7 @@
                 </div>
                 <div class="bookcard__content">
                     <h2 class="bookcard__content-title type--regular">
-                        <a href="#">Frankenstein or, The Modern Prometheus</a>
+                        <a href="/books/84">Frankenstein or, The Modern Prometheus</a>
                     </h2>
                     <span class="type--small">Mary Shelley</span>
                 </div>
@@ -53,7 +53,7 @@
                 </div>
                 <div class="bookcard__content">
                     <h2 class="bookcard__content-title type--regular">
-                        <a href="#">Moby Dick</a>
+                        <a href="/books/2701">Moby Dick</a>
                     </h2>
                     <span class="type--small">Herman Melville</span>
                 </div>
@@ -67,7 +67,7 @@
                 </div>
                 <div class="bookcard__content">
                     <h2 class="bookcard__content-title type--regular">
-                        <a href="#">A Tale of Two Cities</a>
+                        <a href="/books/98">A Tale of Two Cities</a>
                     </h2>
                     <span class="type--small">Charles Dickens</span>
                 </div>
@@ -81,7 +81,7 @@
                 </div>
                 <div class="bookcard__content">
                     <h2 class="bookcard__content-title type--regular">
-                        <a href="#">Dracula</a>
+                        <a href="/books/345">Dracula</a>
                     </h2>
                     <span class="type--small">Bram Stoker</span>
                 </div>

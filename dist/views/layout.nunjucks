@@ -23,16 +23,17 @@
     <meta name="twitter:description" content="">
     <meta name="twitter:image" content="">
 
-    <link href="https://d2qrn6phobn81r.cloudfront.net/css/app-4968f6d53e.css" rel="stylesheet">
-    <script src="https://d2qrn6phobn81r.cloudfront.net/js/app-2eeb662cb5.js" async></script>
+    <link href="https://d2qrn6phobn81r.cloudfront.net/css/app-7c22af3881.css" rel="stylesheet">
+    <script src="https://d2qrn6phobn81r.cloudfront.net/js/app-044b349b63.js" async></script>
     {% if ENV_DEVELOPMENT %}
     <script src="http://localhost:35729/livereload.js"></script>
     {% endif %}
 </head>
 <body class="js-app">
-    {% include "partials/header.nunjucks" %}
+    {% block header %}
+        {% include "partials/header.nunjucks" %}
+    {% endblock %}
     <main class="main" role="main">
-        <img src="https://d2qrn6phobn81r.cloudfront.net/img/logo-6139add0b9.svg" alt="Gutenburg Collective" width="200">
         {% block content %}{% endblock %}
     </main>
 </body>
