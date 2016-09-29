@@ -23,7 +23,7 @@
         <div class="columns small-4">
             <div class="bookcard">
                 <div class="bookcard__cover">
-                    <a href="#">
+                    <a href="/books/1661">
                         <img class="bookcard__image lazyload" data-src="img/sherlock_holmes.jpg" alt="The Adventures of Sherlock Holmes" width="125">
                     </a>
                 </div>
@@ -39,7 +39,7 @@
         <div class="columns small-4">
             <div class="bookcard">
                 <div class="bookcard__cover">
-                    <a href="#">
+                    <a href="/books/84">
                         <img class="bookcard__image lazyload" data-src="img/frankenstein.jpg" alt="Frankenstein" width="125">
                     </a>
                 </div>
@@ -55,7 +55,7 @@
         <div class="columns small-4">
             <div class="bookcard">
                 <div class="bookcard__cover">
-                    <a href="#">
+                    <a href="/books/2701">
                         <img class="bookcard__image lazyload" data-src="img/moby_dick.jpg" alt="Moby Dick" width="125">
                     </a>
                 </div>
@@ -71,7 +71,7 @@
         <div class="columns small-4">
             <div class="bookcard">
                 <div class="bookcard__cover">
-                    <a href="#">
+                    <a href="/books/98">
                         <img class="bookcard__image lazyload" data-src="img/a_tale_of_two_cities.jpg" alt="A Tale of Two Cities" width="125">
                     </a>
                 </div>
@@ -87,7 +87,7 @@
         <div class="columns small-4">
             <div class="bookcard">
                 <div class="bookcard__cover">
-                    <a href="#">
+                    <a href="/books/345">
                         <img class="bookcard__image lazyload" data-src="img/dracula.jpg" alt="Book cover for Dracula" width="125">
                     </a>
                 </div>
