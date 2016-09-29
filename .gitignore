@@ -4,3 +4,4 @@ public/components
 /.idea/*
 npm-debug.log
 .awspublish*
+.DS_Store
