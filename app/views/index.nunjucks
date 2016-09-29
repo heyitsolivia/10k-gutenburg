@@ -7,7 +7,9 @@
         <div class="columns small-4">
             <div class="bookcard">
                 <div class="bookcard__cover">
-                    <img class="bookcard__image" src="https://raw.githubusercontent.com/GITenberg/Pride-and-Prejudice_1342/master/cover.png" alt="Book cover for Pride and Prejudice" width="125">
+                    <a href="/books/1342">
+                        <img class="bookcard__image lazyload" data-src="img/pride_and_prejudice.jpg" alt="Pride and Prejudice" width="125">
+                    </a>
                 </div>
                 <div class="bookcard__content">
                     <h2 class="bookcard__content-title type--regular">
@@ -21,7 +23,9 @@
         <div class="columns small-4">
             <div class="bookcard">
                 <div class="bookcard__cover">
-                    <img class="bookcard__image" src="https://github.com/GITenberg/The-Adventures-of-Sherlock-Holmes_1661/raw/master/cover.png" alt="Book cover for the Adventures of Sherlock Holmes" width="125">
+                    <a href="#">
+                        <img class="bookcard__image lazyload" data-src="img/sherlock_holmes.jpg" alt="The Adventures of Sherlock Holmes" width="125">
+                    </a>
                 </div>
                 <div class="bookcard__content">
                     <h2 class="bookcard__content-title type--regular">
@@ -35,7 +39,9 @@
         <div class="columns small-4">
             <div class="bookcard">
                 <div class="bookcard__cover">
-                    <img class="bookcard__image" src="/img/frankenstein.jpg" alt="Book cover for Frankenstein" width="125">
+                    <a href="#">
+                        <img class="bookcard__image lazyload" data-src="img/frankenstein.jpg" alt="Frankenstein" width="125">
+                    </a>
                 </div>
                 <div class="bookcard__content">
                     <h2 class="bookcard__content-title type--regular">
@@ -49,7 +55,9 @@
         <div class="columns small-4">
             <div class="bookcard">
                 <div class="bookcard__cover">
-                    <img class="bookcard__image" src="https://raw.githubusercontent.com/GITenberg/Moby-Dick--Or-The-Whale_2701/master/cover.jpg" alt="Book cover for Moby Dick" width="125">
+                    <a href="#">
+                        <img class="bookcard__image lazyload" data-src="img/moby_dick.jpg" alt="Moby Dick" width="125">
+                    </a>
                 </div>
                 <div class="bookcard__content">
                     <h2 class="bookcard__content-title type--regular">
@@ -63,7 +71,9 @@
         <div class="columns small-4">
             <div class="bookcard">
                 <div class="bookcard__cover">
-                    <img class="bookcard__image" src="https://raw.githubusercontent.com/GITenberg/A-Tale-of-Two-Cities_98/master/cover.jpg" alt="Book cover for A Tale of Two Cities" width="125">
+                    <a href="#">
+                        <img class="bookcard__image lazyload" data-src="img/a_tale_of_two_cities.jpg" alt="A Tale of Two Cities" width="125">
+                    </a>
                 </div>
                 <div class="bookcard__content">
                     <h2 class="bookcard__content-title type--regular">
@@ -77,7 +87,9 @@
         <div class="columns small-4">
             <div class="bookcard">
                 <div class="bookcard__cover">
-                    <img class="bookcard__image" src="https://raw.githubusercontent.com/GITenberg/Dracula_345/master/cover.jpg" alt="Book cover for Dracula" width="125">
+                    <a href="#">
+                        <img class="bookcard__image lazyload" data-src="img/dracula.jpg" alt="Book cover for Dracula" width="125">
+                    </a>
                 </div>
                 <div class="bookcard__content">
                     <h2 class="bookcard__content-title type--regular">
