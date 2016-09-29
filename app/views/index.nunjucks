@@ -24,7 +24,7 @@
             <div class="bookcard">
                 <div class="bookcard__cover">
                     <a href="/books/1661">
-                        <img class="bookcard__image lazyload" data-src="img/sherlock_holmes.jpg" alt="The Adventures of Sherlock Holmes" width="125">
+                        <img class="bookcard__image lazyload" data-src="img/sherlock_holmes.jpg" alt="Sherlock Holmes" width="125">
                     </a>
                 </div>
                 <div class="bookcard__content">
@@ -88,7 +88,7 @@
             <div class="bookcard">
                 <div class="bookcard__cover">
                     <a href="/books/345">
-                        <img class="bookcard__image lazyload" data-src="img/dracula.jpg" alt="Book cover for Dracula" width="125">
+                        <img class="bookcard__image lazyload" data-src="img/dracula.jpg" alt="Dracula" width="125">
                     </a>
                 </div>
                 <div class="bookcard__content">

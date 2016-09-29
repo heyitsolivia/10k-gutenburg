@@ -512,8 +512,11 @@ h1, h2, h3, h4, h5, h6 {
   transition: transform 600ms;
   transition: transform 600ms, -webkit-transform 600ms;
   width: 9.375rem;
-  color: #fff;
-  background-clip: padding-box; }
+  color: #ddd;
+  font-family: "Alegreya Sans", Helvetica, Arial, sans-serif;
+  background-clip: padding-box;
+  line-height: 10.9375rem;
+  text-align: center; }
 
 .bookcard:hover .bookcard__image {
   -webkit-transform: rotateY(-30deg);

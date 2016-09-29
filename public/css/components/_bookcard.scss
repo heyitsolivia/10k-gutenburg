@@ -26,8 +26,11 @@
     transform-origin: left center;
     transition: transform 600ms;
     width: rem-calc(150);
-    color: #fff;
+    color: #ddd;
+    font-family: $font-family-sans;
     background-clip: padding-box;
+    line-height: rem-calc(175);
+    text-align: center;
 }
 
 .bookcard:hover .bookcard__image{
