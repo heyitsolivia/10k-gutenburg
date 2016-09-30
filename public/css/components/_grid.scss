@@ -18,7 +18,6 @@
     flex: 1 1 0;
     padding-left: $grid-gutter;
     padding-right: $grid-gutter;
-    // background-color: #c0c0c0;
     box-sizing: border-box;
 }
 
@@ -27,12 +26,16 @@
     max-width: 100%;
 }
 
-.small-4 {
-    flex: 0 0 30%;
-    max-width: 30%;
+.medium-6 {
+    @media screen and (min-width: 40em) {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
 }
 
-.small-3 {
-    flex: 0 0 33.33333%;
-    max-width: 33.33333%;
+.large-4 {
+    @media screen and (min-width: 64em) {
+        flex: 0 0 33.33333%;
+        max-width: 33.33333%;
+    }
 }

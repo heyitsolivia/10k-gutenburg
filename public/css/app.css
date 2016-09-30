@@ -436,17 +436,19 @@ template {
           flex: 0 0 100%;
   max-width: 100%; }
 
-.small-4 {
-  -webkit-flex: 0 0 30%;
-      -ms-flex: 0 0 30%;
-          flex: 0 0 30%;
-  max-width: 30%; }
+@media screen and (min-width: 40em) {
+  .medium-6 {
+    -webkit-flex: 0 0 50%;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    max-width: 50%; } }
 
-.small-3 {
-  -webkit-flex: 0 0 33.33333%;
-      -ms-flex: 0 0 33.33333%;
-          flex: 0 0 33.33333%;
-  max-width: 33.33333%; }
+@media screen and (min-width: 64em) {
+  .large-4 {
+    -webkit-flex: 0 0 33.33333%;
+        -ms-flex: 0 0 33.33333%;
+            flex: 0 0 33.33333%;
+    max-width: 33.33333%; } }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0; }
@@ -484,8 +486,8 @@ h1, h2, h3, h4, h5, h6 {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   -webkit-perspective: 1000;
           perspective: 1000;
   -webkit-transform-style: preserve-3d;
@@ -523,7 +525,8 @@ h1, h2, h3, h4, h5, h6 {
           transform: rotateY(-30deg); }
 
 .bookcard__content {
-  margin: 1rem; }
+  margin: 1rem;
+  margin-right: 0; }
   .bookcard__content a {
     color: #444;
     line-height: 1.2; }
