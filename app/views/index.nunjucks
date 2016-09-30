@@ -1,30 +1,34 @@
 {% extends 'layout.nunjucks' %}
 
 {% block content %}
-    <h1 class="section__header">Popular Classics</h1>
+    <h1 class="section__header">Discover Popular Classics</h1>
 
     <div class="row">
         {% for book in books %}
         <div class="columns small-12 medium-6 large-4">
             <div class="bookcard">
                 <div class="bookcard__cover">
-                    <a href="/books/{{ book.bookId }}{% if book.hasOpened %}?page={{ book.lastPage }}{% endif %}">
+                    <a href="/books/{{ book.bookId }}">
                         <img class="bookcard__image lazyload" data-src="{{ book.coverUrl }}" alt="{{ book.title }}" width="125">
                     </a>
                     {% if book.hasOpened %}
-                        <div class="bookmark"></div>
+                        <a class="bookmark" href="/books/{{ book.bookId }}{% if book.hasOpened %}?page={{ book.lastPage }}{% endif %}">
                     {% endif %}
                 </div>
                 <div class="bookcard__content">
                     <h2 class="bookcard__content-title type--regular">
-                        <a href="/books/{{ book.bookId }}{% if book.hasOpened %}?page={{ book.lastPage }}{% endif %}">{{ book.title }}</a>
+                        <a href="/books/{{ book.bookId }}">{{ book.title }}</a>
                     </h2>
                     <span class="type--small">{{ book.author }}</span>
 
                     {% if book.hasOpened %}
-                        <br>
-                        <br>
-                        <small>Continue from page {{ book.lastPage }}</small>
+                    <div class="bookcard__nav">
+                        <small>
+                            <a href="/books/{{ book.bookId }}{% if book.hasOpened %}?page={{ book.lastPage }}{% endif %}">
+                                Continue from page {{ book.lastPage }}
+                            </a>
+                        </small>
+                    </div>
                     {% endif %}
 
                 </div>
