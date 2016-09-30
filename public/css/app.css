@@ -510,9 +510,9 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-transform-origin: left center;
       -ms-transform-origin: left center;
           transform-origin: left center;
-  transition: -webkit-transform 600ms;
-  transition: transform 600ms;
-  transition: transform 600ms, -webkit-transform 600ms;
+  transition: opacity 300ms, -webkit-transform 600ms;
+  transition: transform 600ms, opacity 300ms;
+  transition: transform 600ms, opacity 300ms, -webkit-transform 600ms;
   width: 9.375rem;
   color: #ddd;
   font-family: "Alegreya Sans", Helvetica, Arial, sans-serif;
@@ -522,8 +522,7 @@ h1, h2, h3, h4, h5, h6 {
   .bookcard__image.lazyloading {
     opacity: 0; }
   .bookcard__image.lazyloaded {
-    opacity: 1;
-    transition: opacity 300ms; }
+    opacity: 1; }
 
 .bookcard:hover .bookcard__image {
   -webkit-transform: rotateY(-30deg);
