@@ -32,9 +32,10 @@
     <meta name="twitter:image" content="">
 
     <meta name="turbolinks-cache-control" content="no-cache">
+    <script id="js-loadcss"></script>
 
-    <link href="https://d2qrn6phobn81r.cloudfront.net/css/app-3e17eeb0d6.css" rel="stylesheet">
-    <script src="https://d2qrn6phobn81r.cloudfront.net/js/app-e2a0fe0d54.js" async></script>
+    <link href="https://d2qrn6phobn81r.cloudfront.net/css/app-98005e5f6f.css" rel="stylesheet">
+    <script src="https://d2qrn6phobn81r.cloudfront.net/js/app-226cded1ac.js" async></script>
     {% if ENV_DEVELOPMENT %}
     <script src="http://localhost:35729/livereload.js"></script>
     {% endif %}
