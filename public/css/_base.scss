@@ -1,7 +1,7 @@
 // Base Styles
 
 body {
-    background: $primary-color--light;
+    background: #fafafa;
     font-family: $font-family-sans;
     font-size: 1rem;
     color: #222;
@@ -10,7 +10,7 @@ body {
 
 .main {
     padding: 1rem;
-    background-color: #fafafa;
+    // background-color: #fafafa;
 }
 
 .main--book {
@@ -62,7 +62,7 @@ body {
 }
 
 .header--book + .main {
-    margin-top: 9rem;
+    padding-top: 9rem;
 }
 
 .section__header {
@@ -87,6 +87,20 @@ body {
     }
 }
 
+
+// Footer
+
+.footer {
+    background: darken($primary-color--light, 1%);
+    padding: 1rem;
+    text-align: center;
+    color: #666;
+
+    a {
+        color: darken($primary-color--dark, 25%);
+    }
+}
+
 // Accessibility
 
 // Show for screen readers only
@@ -101,4 +115,29 @@ body {
 .turbolinks-progress-bar {
   height: 2px;
   background-color: #AAC2CE;
+}
+
+
+
+// Animations
+
+// Fade In
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.header__logo,
+.book__title {
+    opacity: 0;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    animation-name: fadeIn;
 }

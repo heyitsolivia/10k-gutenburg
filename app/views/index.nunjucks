@@ -20,6 +20,10 @@
                         <a href="/books/{{ book.bookId }}">{{ book.title }}</a>
                     </h2>
                     <span class="type--small">{{ book.author }}</span>
+                    <br>
+                    <br>
+                    <small>Published in {{ book.publicationYear }}</small>
+
 
                     {% if book.hasOpened %}
                     <div class="bookcard__nav">
@@ -36,4 +40,14 @@
         </div>
         {% endfor %}
     </div>
+
+{% endblock %}
+
+{% block footer %}
+<footer class="footer">
+    <small>
+        Gutenburg Collection is an open library experience of free, public domain classics.
+        Submit a <a href="https://github.com/heyitsolivia/10k-gutenburg/issues/new" target="_blank">request for more books.</a>
+    </small>
+</footer>
 {% endblock %}

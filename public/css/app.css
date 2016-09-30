@@ -543,31 +543,36 @@ h1, h2, h3, h4, h5, h6 {
   .bookcard__content .type--small {
     color: #666; }
 
-.bookcard__content-title {
-  margin-bottom: 0.5rem; }
+.bookcard__content-title a {
+  text-decoration: none;
+  transition: color 200ms; }
+  .bookcard__content-title a:hover {
+    color: #6f8899; }
 
 .bookcard__nav {
   position: absolute;
   bottom: 2rem; }
+  .bookcard__nav a {
+    color: #8da1ae; }
 
 .bookmark {
   background-image: linear-gradient(180deg, #9a4f47, #e74c3c 50%, #e74c3c 100%);
   width: 1.25rem;
-  height: 0.5rem;
+  height: 1.5rem;
   position: relative;
   margin-left: 0.5rem;
   bottom: 0;
   transition: -webkit-transform 200ms;
   transition: transform 200ms;
   transition: transform 200ms, -webkit-transform 200ms;
-  -webkit-transform: translateY(-4px);
-      -ms-transform: translateY(-4px);
-          transform: translateY(-4px);
+  -webkit-transform: translateY(-6px);
+      -ms-transform: translateY(-6px);
+          transform: translateY(-6px);
   z-index: -1; }
   .bookmark:before, .bookmark:after {
     content: "";
     position: absolute;
-    top: 0;
+    top: 1rem;
     width: 0;
     height: 0;
     border-top: 0.5rem solid transparent;
@@ -654,15 +659,14 @@ quote p {
   margin-bottom: 4rem; }
 
 body {
-  background: #E9EDF1;
+  background: #fafafa;
   font-family: "Alegreya Sans", Helvetica, Arial, sans-serif;
   font-size: 1rem;
   color: #222;
   margin: 0; }
 
 .main {
-  padding: 1rem;
-  background-color: #fafafa; }
+  padding: 1rem; }
 
 .main--book {
   background-color: #E9EDF1; }
@@ -703,7 +707,7 @@ body {
     max-width: 65%; }
 
 .header--book + .main {
-  margin-top: 9rem; }
+  padding-top: 9rem; }
 
 .section__header {
   text-align: center;
@@ -723,6 +727,14 @@ body {
     margin-top: 1rem;
     border-top: 1px solid #DAE2E8; }
 
+.footer {
+  background: #e6eaef;
+  padding: 1rem;
+  text-align: center;
+  color: #666; }
+  .footer a {
+    color: #6f8899; }
+
 .show-for-sr {
   position: absolute !important;
   width: 1px;
@@ -733,3 +745,29 @@ body {
 .turbolinks-progress-bar {
   height: 2px;
   background-color: #AAC2CE; }
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+.header__logo,
+.book__title {
+  opacity: 0;
+  -webkit-animation-duration: 500ms;
+          animation-duration: 500ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn; }
