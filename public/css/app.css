@@ -666,7 +666,8 @@ body {
   margin: 0; }
 
 .main {
-  padding: 1rem; }
+  padding: 1rem;
+  min-height: calc(100vh - 100px); }
 
 .main--book {
   background-color: #E9EDF1; }
@@ -697,8 +698,6 @@ body {
   position: fixed;
   width: 100%;
   top: 0; }
-  .header--book .header__logo {
-    position: absolute; }
   .header--book .book__title {
     -webkit-flex: 1;
         -ms-flex: 1;

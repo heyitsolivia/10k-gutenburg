@@ -10,7 +10,7 @@ body {
 
 .main {
     padding: 1rem;
-    // background-color: #fafafa;
+    min-height: calc(100vh - 100px);
 }
 
 .main--book {
@@ -45,10 +45,6 @@ body {
     position: fixed;
     width: 100%;
     top: 0;
-
-    .header__logo {
-        position: absolute;
-    }
 
     .book__title {
         flex: 1;
