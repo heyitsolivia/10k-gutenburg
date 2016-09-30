@@ -23,13 +23,13 @@
     <meta name="twitter:description" content="">
     <meta name="twitter:image" content="">
 
-    <link href="/css/app.css" rel="stylesheet">
+    <script id="js-loadcss"></script>
     <script src="/js/app.js" async></script>
     {% if ENV_DEVELOPMENT %}
     <script src="http://localhost:35729/livereload.js"></script>
     {% endif %}
 </head>
-<body class="js-app">
+<body>
     {% block header %}
         {% include "partials/header.nunjucks" %}
     {% endblock %}
