@@ -3,7 +3,7 @@ Gutenburg Collection in 10 K
 A https://a-k-apart.com/ project that provides a progressively enhanced
 reading experience for select Gutenburg classics.
 
-![Alt text](/screenshot2.jpg?raw=true "Gutenburg Screenshot")
+![Alt text](/screenshot3.jpg?raw=true "Gutenburg Collection preview")
 
 Deployment on Azure
 -------------------
