@@ -1,7 +1,7 @@
 {% extends 'layout.nunjucks' %}
 
 {% block content %}
-    <h1 class="section__header">Most Popular Books {{ views }}</h1>
+    <h1 class="section__header">Popular Classics</h1>
 
     <div class="row">
         {% for book in books %}
@@ -11,6 +11,9 @@
                     <a href="/books/{{ book.bookId }}{% if book.hasOpened %}?page={{ book.lastPage }}{% endif %}">
                         <img class="bookcard__image lazyload" data-src="{{ book.coverUrl }}" alt="{{ book.title }}" width="125">
                     </a>
+                    {% if book.hasOpened %}
+                        <div class="bookmark"></div>
+                    {% endif %}
                 </div>
                 <div class="bookcard__content">
                     <h2 class="bookcard__content-title type--regular">
