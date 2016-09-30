@@ -21,7 +21,7 @@
                     {% if book.hasOpened %}
                         <br>
                         <br>
-                        <div>Continue from p.{{ book.lastPage }}</div>
+                        <small>Continue from page {{ book.lastPage }}</small>
                     {% endif %}
 
                 </div>

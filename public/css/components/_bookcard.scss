@@ -31,6 +31,16 @@
     background-clip: padding-box;
     line-height: rem-calc(175);
     text-align: center;
+
+    // &.lazyload,
+    &.lazyloading {
+        opacity: 0;
+    }
+
+    &.lazyloaded {
+        opacity: 1;
+        transition: opacity 300ms;
+    }
 }
 
 .bookcard:hover .bookcard__image{
