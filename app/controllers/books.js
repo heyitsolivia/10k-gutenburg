@@ -4,9 +4,17 @@ var express = require('express'),
     router = express.Router();
 
 router.get('/:id', function(req, res) {
+    var sess = req.session;
     var bookId = req.params.id;
     var pageNumber = req.query.page || 1;
 
+    if (!sess.books) {
+        sess.books = {};
+    }
+    if (!sess.books[bookId] || (sess.books[bookId] < pageNumber)) {
+        sess.books[bookId] = pageNumber;
+    }
+    
     var metadataPath = path.join(__dirname, '..', '..', 'public', 'books', bookId, 'metadata.json');
     var metadata = JSON.parse(fs.readFileSync(metadataPath));
 

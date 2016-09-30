@@ -9,11 +9,19 @@ var compress = require('compression');
 var methodOverride = require('method-override');
 var nunjucks = require('nunjucks');
 var minifyHTML = require('express-minify-html');
+var session = require('express-session');
 
 module.exports = function(app, config) {
   var env = process.env.NODE_ENV || 'development';
   app.locals.ENV = env;
   app.locals.ENV_DEVELOPMENT = env == 'development';
+
+  var sess = { secret: 'keyboard cat', cookie: {} };
+  if (app.get('env') !== 'development') {
+    app.set('trust proxy', 1);
+    sess.cookie.secure = true;
+  }
+  app.use(session(sess));
 
   if (app.get('env') === 'development') {
     app.set('views', config.root + '/app/views');
