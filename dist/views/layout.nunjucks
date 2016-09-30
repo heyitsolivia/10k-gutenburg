@@ -16,25 +16,22 @@
     <meta name="msapplication-config" content="https://d2qrn6phobn81r.cloudfront.net/img/favicons/browserconfig-0fd7a422f3.xml">
     <meta name="theme-color" content="#ffffff">
 
-    <meta property="og:title" content="" />
-    <meta property="og:site_name" content="" />
-    <meta property="og:url" content="" />
-    <meta property="og:description" content="" />
-    <meta property="fb:app_id" content="">
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="" />
+    <meta property="og:title" content="Gutenburg Collection">
+    <meta property="og:site_name" content="Gutenburg Collection">
+    <meta property="og:description" content="The Gutenburg Collection is an open library experience of free, public domain classics">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://d2qrn6phobn81r.cloudfront.net/img/og/gutenburg_share_facebook-f097310212.jpg">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="">
-    <meta name="twitter:creator" content="">
-    <meta name="twitter:title" content="">
-    <meta name="twitter:description" content="">
-    <meta name="twitter:image" content="">
+    <meta name="twitter:site" content="heyits0livia">
+    <meta name="twitter:title" content="Gutenburg Collection">
+    <meta name="twitter:description" content="The Gutenburg Collection is an open library experience of free, public domain classics">
+    <meta name="twitter:image" content="https://d2qrn6phobn81r.cloudfront.net/img/og/gutenburg_share_twitter-1f534bd873.jpg">
 
     <meta name="turbolinks-cache-control" content="no-cache">
     <script id="js-loadcss"></script>
 
-    <link href="https://d2qrn6phobn81r.cloudfront.net/css/app-98005e5f6f.css" rel="stylesheet">
+    <link href="https://d2qrn6phobn81r.cloudfront.net/css/app-966add648a.css" rel="stylesheet">
     <script src="https://d2qrn6phobn81r.cloudfront.net/js/app-226cded1ac.js" async></script>
     {% if ENV_DEVELOPMENT %}
     <script src="http://localhost:35729/livereload.js"></script>
@@ -47,5 +44,6 @@
     <main class="main {% block containerclass %}{% endblock %}" role="main">
         {% block content %}{% endblock %}
     </main>
+    {% block footer %}{% endblock %}
 </body>
 </html>

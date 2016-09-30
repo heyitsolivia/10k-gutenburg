@@ -4,7 +4,7 @@
     <div class="header__logo">
         <h1 class="show-for-sr">Gutenburg Collection</h1>
         <a href="/">
-            <img class="logo" src="https://d2qrn6phobn81r.cloudfront.net/img/logo-small-59d118ccd7.svg" alt="Gutenburg Collective" width="50">
+            <img class="logo" src="https://d2qrn6phobn81r.cloudfront.net/img/logo-small-59d118ccd7.svg" alt="Gutenburg Collective" width="50" height="50">
         </a>
     </div>
 
