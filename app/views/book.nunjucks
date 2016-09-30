@@ -23,11 +23,11 @@
 
     <div class="page-navigation-wrapper">
     {% if hasPrevious %}
-        <a class="page-navigation js-previous-page" href=".{{ previousPageUrl }}">Previous Page</a>
+        <a class="page-navigation js-previous-page" href="/{{ previousPageUrl }}">Previous Page</a>
     {% endif %}
 
     {% if hasNext %}
-        <a class="page-navigation page-navigation--right js-next-page" href=".{{ nextPageUrl }}">Next Page</a>
+        <a class="page-navigation page-navigation--right js-next-page" href="/{{ nextPageUrl }}">Next Page</a>
     {% endif %}
     </div>
 {% endblock %}

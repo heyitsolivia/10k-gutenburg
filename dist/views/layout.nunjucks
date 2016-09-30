@@ -12,7 +12,7 @@
     <link rel="icon" type="image/png" href="https://d2qrn6phobn81r.cloudfront.net/img/favicons/favicon-16x16-cd4426be7b.png" sizes="16x16">
     <link rel="manifest" href="/img/favicons/manifest.json">
     <link rel="mask-icon" href="https://d2qrn6phobn81r.cloudfront.net/img/favicons/safari-pinned-tab-7e4a7c575a.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="/img/favicons/favicon.ico">
+    <link rel="shortcut icon" href="https://d2qrn6phobn81r.cloudfront.net/img/favicons/favicon-bc93aa3cca.ico">
     <meta name="msapplication-config" content="https://d2qrn6phobn81r.cloudfront.net/img/favicons/browserconfig-0fd7a422f3.xml">
     <meta name="theme-color" content="#ffffff">
 
@@ -33,7 +33,7 @@
 
     <meta name="turbolinks-cache-control" content="no-cache">
 
-    <link href="https://d2qrn6phobn81r.cloudfront.net/css/app-904298abaa.css" rel="stylesheet">
+    <link href="https://d2qrn6phobn81r.cloudfront.net/css/app-3e17eeb0d6.css" rel="stylesheet">
     <script src="https://d2qrn6phobn81r.cloudfront.net/js/app-e2a0fe0d54.js" async></script>
     {% if ENV_DEVELOPMENT %}
     <script src="http://localhost:35729/livereload.js"></script>

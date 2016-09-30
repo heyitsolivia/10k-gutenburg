@@ -50,7 +50,7 @@ gulp.task('clean', function () {
 });
 
 gulp.task('rev', ['clean'], function () {
-  return gulp.src(['public/**/*', '!**/*.html', '!**/*.txt', '!**/*.ico', '!**/*.scss', '!**/*.json'])
+  return gulp.src(['public/**/*', '!**/*.html', '!**/*.txt', '!**/*.scss', '!**/*.json'])
       .pipe(rev())
       .pipe(gulp.dest('dist/'))
       .pipe(rev.manifest())

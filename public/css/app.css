@@ -6,8 +6,7 @@
  */
 /* Document
    ========================================================================== */
-@import 'https://fonts.googleapis.com/css?family=Alegreya:400,400i';
-@import 'https://fonts.googleapis.com/css?family=Alegreya+Sans:400,500';
+@import 'https://fonts.googleapis.com/css?family=Alegreya:400,400i|Alegreya+Sans:400,500';
 html {
   font-family: sans-serif;
   /* 1 */
