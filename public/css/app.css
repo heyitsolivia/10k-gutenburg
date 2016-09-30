@@ -519,6 +519,11 @@ h1, h2, h3, h4, h5, h6 {
   background-clip: padding-box;
   line-height: 10.9375rem;
   text-align: center; }
+  .bookcard__image.lazyloading {
+    opacity: 0; }
+  .bookcard__image.lazyloaded {
+    opacity: 1;
+    transition: opacity 300ms; }
 
 .bookcard:hover .bookcard__image {
   -webkit-transform: rotateY(-30deg);
