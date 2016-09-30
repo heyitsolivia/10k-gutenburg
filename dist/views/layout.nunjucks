@@ -31,7 +31,7 @@
     <meta name="turbolinks-cache-control" content="no-cache">
     <script id="js-loadcss"></script>
 
-    <link href="https://d2qrn6phobn81r.cloudfront.net/css/app-966add648a.css" rel="stylesheet">
+    <link href="https://d2qrn6phobn81r.cloudfront.net/css/app-983a64e9d6.css" rel="stylesheet">
     <script src="https://d2qrn6phobn81r.cloudfront.net/js/app-226cded1ac.js" async></script>
     {% if ENV_DEVELOPMENT %}
     <script src="http://localhost:35729/livereload.js"></script>
