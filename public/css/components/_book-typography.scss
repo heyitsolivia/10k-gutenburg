@@ -1,9 +1,9 @@
 // Books
 
 .page {
-    max-width: 30em;
+    max-width: 30rem;
     margin: auto;
-    margin-bottom: 6rem;
+    margin-bottom: 4rem;
     background-color: #fff;
     padding: 1rem 2rem;
     border-radius: 3px;
@@ -13,6 +13,26 @@
         padding: 4rem 7rem;
     }
 }
+
+.page-navigation-wrapper {
+    margin-bottom: 1.5rem;
+    max-width: 44rem;
+    margin: auto;
+}
+
+.page-navigation {
+    color: #333;
+    background-color: $primary-color--dark;
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+    .page-navigation--right {
+        float: right;
+    }
 
 p {
     font-size: 1.1rem;

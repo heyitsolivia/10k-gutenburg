@@ -24,7 +24,8 @@
     <meta name="twitter:image" content="">
 
     <meta name="turbolinks-cache-control" content="no-cache">
-    <script id="js-loadcss"></script>
+
+    <link href="/css/app.css" rel="stylesheet">
     <script src="/js/app.js" async></script>
     {% if ENV_DEVELOPMENT %}
     <script src="http://localhost:35729/livereload.js"></script>
