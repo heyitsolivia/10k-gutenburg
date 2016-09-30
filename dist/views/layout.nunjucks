@@ -6,7 +6,15 @@
     <title>{{ title }}</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="apple-touch-icon-precomposed" href="/favicon-152.png">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://d2qrn6phobn81r.cloudfront.net/img/favicons/apple-touch-icon-74bda5e7f3.png">
+    <link rel="icon" type="image/png" href="https://d2qrn6phobn81r.cloudfront.net/img/favicons/favicon-32x32-e5110dd255.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://d2qrn6phobn81r.cloudfront.net/img/favicons/favicon-16x16-cd4426be7b.png" sizes="16x16">
+    <link rel="manifest" href="/img/favicons/manifest.json">
+    <link rel="mask-icon" href="https://d2qrn6phobn81r.cloudfront.net/img/favicons/safari-pinned-tab-7e4a7c575a.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/img/favicons/favicon.ico">
+    <meta name="msapplication-config" content="https://d2qrn6phobn81r.cloudfront.net/img/favicons/browserconfig-0fd7a422f3.xml">
+    <meta name="theme-color" content="#ffffff">
 
     <meta property="og:title" content="" />
     <meta property="og:site_name" content="" />
@@ -24,8 +32,9 @@
     <meta name="twitter:image" content="">
 
     <meta name="turbolinks-cache-control" content="no-cache">
-    <script id="js-loadcss"></script>
-    <script src="https://d2qrn6phobn81r.cloudfront.net/js/app-c703190e82.js" async></script>
+
+    <link href="https://d2qrn6phobn81r.cloudfront.net/css/app-904298abaa.css" rel="stylesheet">
+    <script src="https://d2qrn6phobn81r.cloudfront.net/js/app-e2a0fe0d54.js" async></script>
     {% if ENV_DEVELOPMENT %}
     <script src="http://localhost:35729/livereload.js"></script>
     {% endif %}
@@ -34,7 +43,7 @@
     {% block header %}
         {% include "partials/header.nunjucks" %}
     {% endblock %}
-    <main class="main" role="main">
+    <main class="main {% block containerclass %}{% endblock %}" role="main">
         {% block content %}{% endblock %}
     </main>
 </body>

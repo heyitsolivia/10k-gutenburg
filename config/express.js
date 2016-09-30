@@ -16,11 +16,11 @@ module.exports = function(app, config) {
   app.locals.ENV = env;
   app.locals.ENV_DEVELOPMENT = env == 'development';
 
-  var sess = { secret: 'keyboard cat', cookie: {} };
-  if (app.get('env') !== 'development') {
-    app.set('trust proxy', 1);
-    sess.cookie.secure = true;
-  }
+  var sess = { secret: 'keyboard', cookie: { secure: 'auto' } };
+  // if (app.get('env') !== 'development') {
+  //   app.set('trust proxy', 1);
+  //   sess.cookie.secure = true;
+  // }
   app.use(session(sess));
 
   if (app.get('env') === 'development') {
