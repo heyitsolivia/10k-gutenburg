@@ -22,7 +22,7 @@ router.get('/', function (req, res, next) {
         }),
         new Book({
             bookId: '1661',
-            title: 'The Adventures of Sherlock Holmes',
+            title: 'Sherlock Holmes',
             author: 'Arthur Conan Doyle',
             coverUrl: prefix + '/img/sherlock_holmes-934a7b7c7d.jpg',
             hasOpened: !!sess.books['1661'],
@@ -30,7 +30,7 @@ router.get('/', function (req, res, next) {
         }),
         new Book({
             bookId: '84',
-            title: 'Frankenstein or, The Modern Prometheus',
+            title: 'Frankenstein',
             author: 'Mary Shelley',
             coverUrl: prefix + '/img/frankenstein-6bf90812bd.jpg',
             hasOpened: !!sess.books['84'],
@@ -67,7 +67,7 @@ router.get('/', function (req, res, next) {
     res.set({'Expires': '0'});
 
     res.render('index', {
-        title: '10K Gutenberg',
+        title: 'Gutenberg Collection',
         books: books,
         views: sess.views
     });

@@ -4,7 +4,7 @@
     <div class="header__logo">
         <h1 class="show-for-sr">Gutenburg Collection</h1>
         <a href="/">
-            <img class="logo" src="/img/logo.svg" alt="Gutenburg Collective" width="150">
+            <img class="logo" src="/img/logo-small.svg" alt="Gutenburg Collective" width="50">
         </a>
     </div>
 
@@ -14,16 +14,20 @@
 
 {% endblock %}
 
+{% block containerclass %}main--book{% endblock %}
+
 {% block content %}
     <div class="page js-page">
         {{ bookPage | safe }}
     </div>
 
+    <div class="page-navigation-wrapper">
     {% if hasPrevious %}
-        <a class="js-previous-page" href=".{{ previousPageUrl }}">Previous Page</a>
+        <a class="page-navigation js-previous-page" href=".{{ previousPageUrl }}">Previous Page</a>
     {% endif %}
 
     {% if hasNext %}
-        <a class="js-next-page" href=".{{ nextPageUrl }}">Next Page</a>
+        <a class="page-navigation page-navigation--right js-next-page" href=".{{ nextPageUrl }}">Next Page</a>
     {% endif %}
+    </div>
 {% endblock %}

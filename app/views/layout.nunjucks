@@ -6,7 +6,15 @@
     <title>{{ title }}</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="apple-touch-icon-precomposed" href="/favicon-152.png">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/img/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/img/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/img/favicons/manifest.json">
+    <link rel="mask-icon" href="/img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/img/favicons/favicon.ico">
+    <meta name="msapplication-config" content="/img/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
 
     <meta property="og:title" content="" />
     <meta property="og:site_name" content="" />
@@ -24,7 +32,8 @@
     <meta name="twitter:image" content="">
 
     <meta name="turbolinks-cache-control" content="no-cache">
-    <script id="js-loadcss"></script>
+
+    <link href="/css/app.css" rel="stylesheet">
     <script src="/js/app.js" async></script>
     {% if ENV_DEVELOPMENT %}
     <script src="http://localhost:35729/livereload.js"></script>
@@ -34,7 +43,7 @@
     {% block header %}
         {% include "partials/header.nunjucks" %}
     {% endblock %}
-    <main class="main" role="main">
+    <main class="main {% block containerclass %}{% endblock %}" role="main">
         {% block content %}{% endblock %}
     </main>
 </body>

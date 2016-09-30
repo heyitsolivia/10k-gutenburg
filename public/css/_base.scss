@@ -2,22 +2,33 @@
 
 body {
     background: $primary-color--light;
-    font-family: $font-family-serif;
-    color: $black;
+    font-family: $font-family-sans;
+    font-size: 1rem;
+    color: #222;
+    margin: 0;
 }
 
 .main {
-    margin: 1rem;
+    padding: 1rem;
+    background-color: #fafafa;
+}
+
+.main--book {
+    background-color: $primary-color--light;
 }
 
 .header {
+    @extend %type--serif;
     background-color: $primary-color;
     text-transform: uppercase;
     text-align: center;
     font-style: italic;
     height: 4rem;
+    padding: 1rem;
+    text-transform: uppercase;
     text-align: center;
 }
+
 
 .logo {
     transition: opacity 200ms;
@@ -41,6 +52,12 @@ body {
 
     .book__title {
         flex: 1;
+        margin: auto;
+        max-width: 65%;
+
+        @media screen and (min-width: 40em) {
+            // max-width: rem-calc(400);
+        }
     }
 }
 
@@ -49,10 +66,25 @@ body {
 }
 
 .section__header {
-    @extend %type--large;
     text-align: center;
     margin-bottom: 4rem;
     margin-top: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 20px;
+    position: relative;
+
+    &:after {
+        content: '';
+        top: 0;
+        width: 10%;
+        height: 1px;
+        margin: auto;
+        display: block;
+        margin-top: 1rem;
+        border-top: 1px solid $primary-color;
+
+    }
 }
 
 // Accessibility
@@ -66,76 +98,7 @@ body {
     clip: rect(0, 0, 0, 0);
 }
 
-// books
-
-body {
-    font-size: 1rem;
-    color: #222;
-    background: #e9edf1;
-    margin: 0;
-}
-
-.page {
-    max-width: 30em;
-    margin: auto;
-    margin-bottom: 6rem;
-    background-color: #fff;
-    padding: 4rem 7rem;
-    border-radius: 3px;
-}
-
-p {
-    font-size: 1.1rem;
-    line-height: 1.75;
-    font-family: "Alegreya", baskerville, times;
-    margin-top: 0.75em;
-    margin-bottom: 0.75em;
-}
-
-p + p {
-    text-indent: 1.5em;
-}
-
-.first-line {
-    text-transform: uppercase;
-    font-size: 0.825em;
-}
-
-quote {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    display: block;
-}
-
-quote,
-quote p {
-    font-size: 0.9rem;
-    font-style: italic;
-}
-
-header {
-    background: #dae2e8;
-    text-align: center;
-    padding: 1rem;
-    margin-bottom: 6rem;
-    text-transform: uppercase;
-    font-style: italic;
-}
-
-.chapter-break {
-    display: block;
-    margin: 5rem auto 2.5rem;
-    font-size: 1.5em;
-    text-align: center;
-}
-
-.type__section-break {
-    background-image: url("../img/fleuron.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    border: 0;
-    height: 1rem;
-    background-size: contain;
-    margin-top: 4rem;
-    margin-bottom: 4rem;
+.turbolinks-progress-bar {
+  height: 2px;
+  background-color: #AAC2CE;
 }
