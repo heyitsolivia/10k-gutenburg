@@ -3,6 +3,8 @@ Gutenburg Collection in 10 K
 A https://a-k-apart.com/ project that provides a progressively enhanced
 reading experience for select Gutenburg classics.
 
+![Alt text](/screenshot.png?raw=true "Gutenburg Screenshot")
+
 Deployment on Azure
 -------------------
 Simply clone the repo and push to your azure git branch.
@@ -20,7 +22,6 @@ Details
 
 #### Progressive Enhancements
 * Designed with no js, no css in mind (plain semantic html)
-* Uses critical path css
 * Bookmarking (saving last viewed page) supported by the backend 
 * Infinite scrolling provided by JS
 
