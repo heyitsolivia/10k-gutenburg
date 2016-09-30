@@ -2,8 +2,8 @@
 
 .bookcard {
     display: flex;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     perspective: 1000;
     transform-style: preserve-3d;
 }
@@ -39,6 +39,7 @@
 
 .bookcard__content {
     margin: 1rem;
+    margin-right: 0;
 
     a {
         color: #444;
