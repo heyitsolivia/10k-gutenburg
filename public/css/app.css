@@ -700,8 +700,6 @@ body {
   position: fixed;
   width: 100%;
   top: 0; }
-  .header--book .header__logo {
-    position: absolute; }
   .header--book .book__title {
     -webkit-flex: 1;
         -ms-flex: 1;
