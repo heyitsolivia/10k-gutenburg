@@ -23,6 +23,7 @@
     <meta name="twitter:description" content="">
     <meta name="twitter:image" content="">
 
+    <meta name="turbolinks-cache-control" content="no-cache">
     <script id="js-loadcss"></script>
     <script src="/js/app.js" async></script>
     {% if ENV_DEVELOPMENT %}

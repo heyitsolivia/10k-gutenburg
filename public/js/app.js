@@ -89,7 +89,6 @@ function initializeInfiniteScroll(bookId) {
     }
 
     var fetchPage = throttle(function() {
-        console.warn('scroll triggered');
         var element = document.querySelectorAll('.js-page')[0];
 
         if (element === undefined) {
@@ -105,6 +104,11 @@ function initializeInfiniteScroll(bookId) {
         if (isLoading || nextPage > metadata.pages) {
             return;
         }
+
+        // Trigger server side caching of page
+        var cacheRequest = new XMLHttpRequest();
+        cacheRequest.open('GET', '/books/' + bookId + '?page=' + nextPage, true);
+        cacheRequest.send();
 
         var pageRequest = new XMLHttpRequest();
         pageRequest.open('GET', baseUrl + '/books/' + bookId + '/page.' + nextPage + '.html', true);

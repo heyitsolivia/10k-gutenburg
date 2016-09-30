@@ -1,92 +1,32 @@
 {% extends 'layout.nunjucks' %}
 
 {% block content %}
-    <h1 class="section__header">Most Popular Books</h1>
+    <h1 class="section__header">Most Popular Books {{ views }}</h1>
 
     <div class="row">
+        {% for book in books %}
         <div class="columns small-4">
             <div class="bookcard">
                 <div class="bookcard__cover">
-                    <img class="bookcard__image" src="https://raw.githubusercontent.com/GITenberg/Pride-and-Prejudice_1342/master/cover.png" alt="Book cover for Pride and Prejudice" width="125">
+                    <a href="/books/{{ book.bookId }}{% if book.hasOpened %}?page={{ book.lastPage }}{% endif %}">
+                        <img class="bookcard__image lazyload" data-src="{{ book.coverUrl }}" alt="{{ book.title }}" width="125">
+                    </a>
                 </div>
                 <div class="bookcard__content">
                     <h2 class="bookcard__content-title type--regular">
-                        <a href="/books/1342">Pride and Prejudice</a>
+                        <a href="/books/{{ book.bookId }}{% if book.hasOpened %}?page={{ book.lastPage }}{% endif %}">{{ book.title }}</a>
                     </h2>
-                    <span class="type--small">Jane Austen</span>
+                    <span class="type--small">{{ book.author }}</span>
+
+                    {% if book.hasOpened %}
+                        <br>
+                        <br>
+                        <div>Continue from p.{{ book.lastPage }}</div>
+                    {% endif %}
+
                 </div>
             </div>
         </div>
-
-        <div class="columns small-4">
-            <div class="bookcard">
-                <div class="bookcard__cover">
-                    <img class="bookcard__image" src="https://github.com/GITenberg/The-Adventures-of-Sherlock-Holmes_1661/raw/master/cover.png" alt="Book cover for the Adventures of Sherlock Holmes" width="125">
-                </div>
-                <div class="bookcard__content">
-                    <h2 class="bookcard__content-title type--regular">
-                        <a href="/books/1661">The Adventures of Sherlock Holmes</a>
-                    </h2>
-                    <span class="type--small">Arthur Conan Doyle</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="columns small-4">
-            <div class="bookcard">
-                <div class="bookcard__cover">
-                    <img class="bookcard__image" src="https://d2qrn6phobn81r.cloudfront.net/img/frankenstein-6bf90812bd.jpg" alt="Book cover for Frankenstein" width="125">
-                </div>
-                <div class="bookcard__content">
-                    <h2 class="bookcard__content-title type--regular">
-                        <a href="/books/84">Frankenstein or, The Modern Prometheus</a>
-                    </h2>
-                    <span class="type--small">Mary Shelley</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="columns small-4">
-            <div class="bookcard">
-                <div class="bookcard__cover">
-                    <img class="bookcard__image" src="https://raw.githubusercontent.com/GITenberg/Moby-Dick--Or-The-Whale_2701/master/cover.jpg" alt="Book cover for Moby Dick" width="125">
-                </div>
-                <div class="bookcard__content">
-                    <h2 class="bookcard__content-title type--regular">
-                        <a href="/books/2701">Moby Dick</a>
-                    </h2>
-                    <span class="type--small">Herman Melville</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="columns small-4">
-            <div class="bookcard">
-                <div class="bookcard__cover">
-                    <img class="bookcard__image" src="https://raw.githubusercontent.com/GITenberg/A-Tale-of-Two-Cities_98/master/cover.jpg" alt="Book cover for A Tale of Two Cities" width="125">
-                </div>
-                <div class="bookcard__content">
-                    <h2 class="bookcard__content-title type--regular">
-                        <a href="/books/98">A Tale of Two Cities</a>
-                    </h2>
-                    <span class="type--small">Charles Dickens</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="columns small-4">
-            <div class="bookcard">
-                <div class="bookcard__cover">
-                    <img class="bookcard__image" src="https://raw.githubusercontent.com/GITenberg/Dracula_345/master/cover.jpg" alt="Book cover for Dracula" width="125">
-                </div>
-                <div class="bookcard__content">
-                    <h2 class="bookcard__content-title type--regular">
-                        <a href="/books/345">Dracula</a>
-                    </h2>
-                    <span class="type--small">Bram Stoker</span>
-                </div>
-            </div>
-        </div>
-
+        {% endfor %}
     </div>
 {% endblock %}

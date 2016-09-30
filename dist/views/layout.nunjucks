@@ -23,13 +23,14 @@
     <meta name="twitter:description" content="">
     <meta name="twitter:image" content="">
 
-    <link href="https://d2qrn6phobn81r.cloudfront.net/css/app-7c22af3881.css" rel="stylesheet">
-    <script src="https://d2qrn6phobn81r.cloudfront.net/js/app-044b349b63.js" async></script>
+    <meta name="turbolinks-cache-control" content="no-cache">
+    <script id="js-loadcss"></script>
+    <script src="https://d2qrn6phobn81r.cloudfront.net/js/app-c703190e82.js" async></script>
     {% if ENV_DEVELOPMENT %}
     <script src="http://localhost:35729/livereload.js"></script>
     {% endif %}
 </head>
-<body class="js-app">
+<body>
     {% block header %}
         {% include "partials/header.nunjucks" %}
     {% endblock %}
