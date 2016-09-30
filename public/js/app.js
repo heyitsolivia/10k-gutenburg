@@ -48,8 +48,8 @@ var baseUrl = '/css/app.css'.split('/css')[0];
 var scrollListener;
 
 ready(function() {
-    // var loadCssTarget = document.getElementById("js-loadcss");
-    // loadCSS('/css/app.css', loadCssTarget);
+    var loadCssTarget = document.getElementById("js-loadcss");
+    loadCSS('/css/deferred.css', loadCssTarget);
     restartScroller();
 });
 
