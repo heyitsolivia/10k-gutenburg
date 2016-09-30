@@ -5,7 +5,7 @@
 
     <div class="row">
         {% for book in books %}
-        <div class="columns small-4">
+        <div class="columns small-12 medium-6 large-4">
             <div class="bookcard">
                 <div class="bookcard__cover">
                     <a href="/books/{{ book.bookId }}{% if book.hasOpened %}?page={{ book.lastPage }}{% endif %}">
@@ -21,7 +21,7 @@
                     {% if book.hasOpened %}
                         <br>
                         <br>
-                        <div>Continue from p.{{ book.lastPage }}</div>
+                        <small>Continue from page {{ book.lastPage }}</small>
                     {% endif %}
 
                 </div>
