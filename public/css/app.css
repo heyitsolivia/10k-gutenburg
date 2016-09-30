@@ -668,7 +668,8 @@ body {
   margin: 0; }
 
 .main {
-  padding: 1rem; }
+  padding: 1rem;
+  min-height: calc(100vh - 100px); }
 
 .main--book {
   background-color: #E9EDF1; }

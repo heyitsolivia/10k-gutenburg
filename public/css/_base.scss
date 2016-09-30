@@ -10,7 +10,7 @@ body {
 
 .main {
     padding: 1rem;
-    // background-color: #fafafa;
+    min-height: calc(100vh - 100px);
 }
 
 .main--book {
